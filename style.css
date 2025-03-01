@@ -399,6 +399,12 @@ ul{
       transition: 0.3s;
   }
 
+  .video-container{
+    border-radius: 1rem;
+    margin: 0 auto;
+    border: 1px solid #000;
+  }
+
   @media screen and (max-width: 600px) {
     .projects-front{
         flex: 0 1 100%;
