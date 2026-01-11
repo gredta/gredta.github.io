@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+
+
 @font-face {
     font-family: 'InterVariable-Italic';
     src: url('../assets/fonts/InterVariable-Italic.ttf') format('truetype');
@@ -58,6 +60,7 @@
     font-weight: 900;
     font-style: italic;
 }
+
 
   h1, h2, h3, .fancy-heading {
     font-family: 'Editorial New', sans-serif;
@@ -387,4 +390,15 @@ ul {
 .force-scrollbar::-webkit-scrollbar-track {
   background: #FFB985;
   border-left: 1px solid black;
+}
+
+@layer components {
+  .tech-tags > div:nth-child(4n + 1) { @apply bg-orange text-black; }
+.tech-tags > div:nth-child(4n + 2) { @apply bg-purple text-black; }
+.tech-tags > div:nth-child(4n + 3) { @apply bg-lightpurple text-black; }
+.tech-tags > div:nth-child(4n + 4) { @apply bg-yellow text-black; }
+
+  /* .tech-tag {
+    @apply rounded-xl px-3 py-1 lg:w-fit h-fit text-center uppercase font-InterVariable font-light text-xs;
+  } */
 }
