@@ -582,10 +582,6 @@ video {
   color: rgb(50 50 50 / var(--tw-text-opacity, 1));
 }
 
-/* .tech-tag {
-    @apply rounded-xl px-3 py-1 lg:w-fit h-fit text-center uppercase font-InterVariable font-light text-xs;
-  } */
-
 .static {
   position: static;
 }
