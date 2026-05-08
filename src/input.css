@@ -155,12 +155,12 @@
 
   /* CSS */
 .swiper-slide {
-  width: 80% !important; /* Make slide smaller than container to allow peeking */
+  width: 80%;
   background: #fff;
   text-align: center;
   padding: 0;
   border-radius: .75rem;
-  border: #323232;
+  border-color: #323232;
   border-width: 1px;
   border-style: solid;
 }
@@ -399,3 +399,4 @@ ul {
 .tech-tags > div:nth-child(4n + 4) { @apply bg-yellow text-black; }
 
 }
+

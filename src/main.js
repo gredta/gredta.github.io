@@ -317,33 +317,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+// FORCE initial state BEFORE ScrollTrigger runs
+gsap.set(".swiper-slide", {
+  opacity: 0,
+  y: 50
+});
+
+// THEN animate on scroll
 gsap.utils.toArray(".swiper-slide").forEach(slide => {
-  // Animate the whole slide
-  gsap.from(slide, {
+
+  gsap.to(slide, {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
     scrollTrigger: {
       trigger: slide,
       start: "top 80%",
-      toggleActions: "play none none none",
-    },
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: "power3.out",
+      toggleActions: "play none none reverse",
+      once: true,
+      invalidateOnRefresh: true
+    }
   });
 
-  // Animate child elements
-  const elements = slide.querySelectorAll("h2, p, .live-link, .bg-orange, .bg-purple, .bg-lightpurple, .bg-yellow");
-  gsap.from(elements, {
-    scrollTrigger: {
-      trigger: slide,
-      start: "top 85%",
-    },
-    opacity: 0,
-    y: 20,
-    duration: 1,
-    ease: "power2.out",
-    stagger: 0.1,
-  });
+});
+
+// ensure ScrollTrigger recalculates after layout settles
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
 });
 
 gsap.registerPlugin(ScrollTrigger);
