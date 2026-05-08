@@ -322,7 +322,7 @@ gsap.utils.toArray(".swiper-slide").forEach(slide => {
   gsap.from(slide, {
     scrollTrigger: {
       trigger: slide,
-      start: "top 90%",
+      start: "top 80%",
       toggleActions: "play none none none",
     },
     opacity: 0,
@@ -336,7 +336,7 @@ gsap.utils.toArray(".swiper-slide").forEach(slide => {
   gsap.from(elements, {
     scrollTrigger: {
       trigger: slide,
-      start: "top 90%",
+      start: "top 85%",
     },
     opacity: 0,
     y: 20,
