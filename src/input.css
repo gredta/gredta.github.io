@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 
+@import "tailwindcss";
 
+@theme {
+  --color-black: #323232;
+  --color-pink: #F68485;
+  --color-orange: #FFB985;
+  --color-purple: #BDB4FF;
+  --color-lightpurple: #EDB5F7;
+  --color-yellow: #EAFC88;
+}
 
 @font-face {
     font-family: 'InterVariable-Italic';
