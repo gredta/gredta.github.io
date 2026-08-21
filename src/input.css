@@ -1,11 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 @import "tailwindcss";
 
+
 @theme {
+  --font-editorial: "Editorial New", serif;
+
   --color-black: #323232;
   --color-pink: #F68485;
   --color-orange: #FFB985;
@@ -71,11 +69,13 @@
 }
 
 
-  h1, h2, h3, .fancy-heading {
-    font-family: 'Editorial New', sans-serif;
-    font-weight: lighter;
-  }
-
+h1,
+h2,
+h3,
+.fancy-heading {
+  font-family: "Editorial New", serif;
+  font-weight: 100;
+}
   
   h1.italic, h2.italic {
     font-style: italic; /* Apply italic to the h1 or h2 */
