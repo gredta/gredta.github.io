@@ -282,6 +282,7 @@ input{
     padding: 6px;
     border: 1px #323232 solid;
     border-radius: .75rem;
+    background-color: white;
 }
 
 textarea{
@@ -296,6 +297,7 @@ textarea{
     border: 1px #323232 solid;
     border-radius: .75rem;
     margin-top: .5rem;
+    background-color: white;
 }
 .top-left-hamburger{
     top: 0;
